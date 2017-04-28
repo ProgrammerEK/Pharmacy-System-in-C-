@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EF6DF03-0880-4FC7-8B3A-4D080ED3E24F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pharmacy_System</RootNamespace>
+    <AssemblyName>Pharmacy System</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.11.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class Files\Db.cs" />
+    <Compile Include="Class Files\Ticket.cs" />
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="Login Files\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Files\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login Files\Registration_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Files\Registration_Form.Designer.cs">
+      <DependentUpon>Registration_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login Files\ResetPassword_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Files\ResetPassword_Form.Designer.cs">
+      <DependentUpon>ResetPassword_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login Files\Splash_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Files\Splash_Form.Designer.cs">
+      <DependentUpon>Splash_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login Files\ViewUsers_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Files\ViewUsers_Form.Designer.cs">
+      <DependentUpon>ViewUsers_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main User Files\Admin_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main User Files\Admin_Form.Designer.cs">
+      <DependentUpon>Admin_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main User Files\Cushier_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main User Files\Cushier_Form.Designer.cs">
+      <DependentUpon>Cushier_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Files\AddToShop_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Files\AddToShop_Form.Designer.cs">
+      <DependentUpon>AddToShop_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Files\Db_Class.cs" />
+    <Compile Include="Other Files\frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Files\frmPrint.Designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Files\ReceptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Files\ReceptForm.Designer.cs">
+      <DependentUpon>ReceptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Files\ShopStore_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Files\ShopStore_Form.Designer.cs">
+      <DependentUpon>ShopStore_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Point Of Sale Files\Category_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Point Of Sale Files\Category_Form.Designer.cs">
+      <DependentUpon>Category_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Point Of Sale Files\Product_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Point Of Sale Files\Product_Form.Designer.cs">
+      <DependentUpon>Product_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Point Of Sale Files\Purchase_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Point Of Sale Files\Purchase_Form.Designer.cs">
+      <DependentUpon>Purchase_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Point Of Sale Files\Selling_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Point Of Sale Files\Selling_Form.Designer.cs">
+      <DependentUpon>Selling_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Other Files\Supplier_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Files\Supplier_Form.Designer.cs">
+      <DependentUpon>Supplier_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report Files\DateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Files\DateForm.Designer.cs">
+      <DependentUpon>DateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report Files\Report_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Files\Report_Form.Designer.cs">
+      <DependentUpon>Report_Form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login Files\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Files\Registration_Form.resx">
+      <DependentUpon>Registration_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Files\ResetPassword_Form.resx">
+      <DependentUpon>ResetPassword_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Files\Splash_Form.resx">
+      <DependentUpon>Splash_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Files\ViewUsers_Form.resx">
+      <DependentUpon>ViewUsers_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main User Files\Admin_Form.resx">
+      <DependentUpon>Admin_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main User Files\Cushier_Form.resx">
+      <DependentUpon>Cushier_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other Files\AddToShop_Form.resx">
+      <DependentUpon>AddToShop_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other Files\frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other Files\ReceptForm.resx">
+      <DependentUpon>ReceptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other Files\ShopStore_Form.resx">
+      <DependentUpon>ShopStore_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Point Of Sale Files\Category_Form.resx">
+      <DependentUpon>Category_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Point Of Sale Files\Product_Form.resx">
+      <DependentUpon>Product_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Point Of Sale Files\Purchase_Form.resx">
+      <DependentUpon>Purchase_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Point Of Sale Files\Selling_Form.resx">
+      <DependentUpon>Selling_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Other Files\Supplier_Form.resx">
+      <DependentUpon>Supplier_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Files\DateForm.resx">
+      <DependentUpon>DateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Files\Report_Form.resx">
+      <DependentUpon>Report_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DGVPrinterHelper.DGVPrinter.datasource" />
+    <None Include="Properties\DataSources\Pharmacy_System.Point_Of_Sale_Files.Receipt.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash screen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1465468952_mypc_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1465468899_floppy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_remove.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
